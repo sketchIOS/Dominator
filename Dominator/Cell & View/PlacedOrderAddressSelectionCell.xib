@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="33" id="KGk-i7-Jjw" customClass="PlacedOrderAddressSelectionCell" customModule="Dominator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="33"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="32.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwD-y2-rTm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4z-50-V3g">
+                                <rect key="frame" x="35" y="5" width="280" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yO4-Xq-v9h">
+                                <rect key="frame" x="0.0" y="3" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="XEy-nf-MDc"/>
+                                    <constraint firstAttribute="width" constant="25" id="ooo-cJ-z6m"/>
+                                </constraints>
+                                <state key="normal" image="tick">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="93p-je-7LB"/>
+                            <constraint firstAttribute="bottom" secondItem="g4z-50-V3g" secondAttribute="bottom" constant="4" id="H2W-mz-Gdz"/>
+                            <constraint firstItem="g4z-50-V3g" firstAttribute="top" secondItem="UwD-y2-rTm" secondAttribute="top" constant="5" id="MPA-5p-80y"/>
+                            <constraint firstItem="g4z-50-V3g" firstAttribute="leading" secondItem="yO4-Xq-v9h" secondAttribute="trailing" constant="10" id="MU5-WK-jbc"/>
+                            <constraint firstItem="yO4-Xq-v9h" firstAttribute="top" secondItem="UwD-y2-rTm" secondAttribute="top" constant="3" id="YVz-so-gQZ"/>
+                            <constraint firstAttribute="trailing" secondItem="g4z-50-V3g" secondAttribute="trailing" constant="5" id="aZd-fL-Sra"/>
+                            <constraint firstItem="yO4-Xq-v9h" firstAttribute="leading" secondItem="UwD-y2-rTm" secondAttribute="leading" id="lrZ-uB-GoX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="UwD-y2-rTm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Yp-f4-1CK"/>
+                    <constraint firstAttribute="trailing" secondItem="UwD-y2-rTm" secondAttribute="trailing" id="IYQ-pD-rDb"/>
+                    <constraint firstItem="UwD-y2-rTm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="auk-QR-ml9"/>
+                    <constraint firstAttribute="bottom" secondItem="UwD-y2-rTm" secondAttribute="bottom" constant="2.5" id="b3i-UA-LSC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnCheck" destination="yO4-Xq-v9h" id="bYH-Hb-vGD"/>
+                <outlet property="lblAddress" destination="g4z-50-V3g" id="cDh-KM-gjB"/>
+            </connections>
+            <point key="canvasLocation" x="-184" y="-149"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tick" width="56" height="56"/>
+    </resources>
+</document>
