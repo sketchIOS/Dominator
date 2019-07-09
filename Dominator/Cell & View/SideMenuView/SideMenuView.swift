@@ -7,15 +7,11 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
+//import Alamofire
+//import SwiftyJSON
 
 protocol SlidePanelDelegate: class {
-   // func selectedCategorySlidePanelView(_ categoryId_menu: Int?)
     func selectedMenuSlidePanelView(_ menuId: Int?)
-//    func changeLanguageFromSlidePanelView()
- //   func logoutFromSlidePanelView()
-//    func goProfileFromSlidePanelView()
 }
 
 class SideMenuView: UIView,UITableViewDelegate,UITableViewDataSource {
@@ -61,16 +57,16 @@ class SideMenuView: UIView,UITableViewDelegate,UITableViewDataSource {
        // imageArray = arrayImage
         selectSectionIndex = index
         
-        categoryArray = ["Product List","Add Product","Upload Product","Clearance List","Order List","Order Deliver","Chat"]
-        categoryImageArray = ["product_list","add_product","upload_product","clearance","order_list","deliver","chat"]
+        categoryArray = ["Categories","My Orders","My Quotes","My Addresses","My Cart","Log out"]
+      //  categoryImageArray = ["product_list","add_product","upload_product","clearance","order_list","deliver","chat"]
         //["icon-newsfeed","icon-newsfeed"]
         print(menuArray)
         self.tableViewMenu.register(UINib(nibName: "SidePanelViewCell", bundle: nil), forCellReuseIdentifier: "kSidePanelViewCell")
         tableViewMenu.delegate = self
         tableViewMenu.dataSource = self
         
-        // tableViewMenu.reloadData()
-    /*
+        
+        /*
         if  let first_name = USERDEFAULTS.value(forKey: "first_name") {
             str_userName = first_name as! String
         }
@@ -82,9 +78,11 @@ class SideMenuView: UIView,UITableViewDelegate,UITableViewDataSource {
             imgvProfile.sd_setImage(with: URL(string: profile_image as! String), placeholderImage: UIImage(named: "placeholder.png"), options: .cacheMemoryOnly)
         }
         */
+        lblName.text = USERDEFAULTS.value(forKey: "userName") as? String
+        lblEmail.text = USERDEFAULTS.value(forKey: "userEmail") as? String
         
-        lblName.text = "ABC Enterprice"
-        lblEmail.text = "sketch.ios1@gmail.com"
+       // lblName.text = "ABC Enterprice"
+       // lblEmail.text = "sketch.ios1@gmail.com"
 
         var frameT:CGRect = tableViewMenu.frame
         frameT.origin.x -= (tableViewMenu.frame.width)
@@ -103,8 +101,14 @@ class SideMenuView: UIView,UITableViewDelegate,UITableViewDataSource {
         
         tableViewMenu.reloadData()
     }
+    @IBAction func userProfileSelected(_ sender: Any) {
+        delegate?.selectedMenuSlidePanelView(1001)
+        stopingAnimation()
+
+    }
+    
     func loadingAnimation(){
-        UIView.animate(withDuration: 1.0, delay: 0.1, options: UIViewAnimationOptions.curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.6, delay: 0.1, options: UIViewAnimationOptions.curveEaseIn, animations: {
             
             var frameT:CGRect = self.tableViewMenu.frame
             frameT.origin.x = 0
@@ -122,7 +126,7 @@ class SideMenuView: UIView,UITableViewDelegate,UITableViewDataSource {
     }
     
     func stopingAnimation(){
-        UIView.animate(withDuration: 1.0, delay: 0.1, options: UIViewAnimationOptions.curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.6, delay: 0.1, options: UIViewAnimationOptions.curveEaseIn, animations: {
             
             var frameT:CGRect = self.tableViewMenu.frame
             frameT.origin.x -= (self.tableViewMenu.frame.width)
@@ -167,8 +171,8 @@ class SideMenuView: UIView,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"kSidePanelViewCell") as! SidePanelViewCell
         
-        cell.lblLine.isHidden = true
-        cell.imageViewArrow.isHidden = true
+        //cell.lblLine.isHidden = true
+      //  cell.imageViewArrow.isHidden = true
 
         // cell.expandableCellImageView.image = UIImage(named: dataArray[indexPath.row])
 //        if indexPath.row < menuArray.count {
@@ -181,16 +185,16 @@ class SideMenuView: UIView,UITableViewDelegate,UITableViewDataSource {
 //
 //        }
         cell.lblName.text = categoryArray[indexPath.row]
-        cell.imageViewMenuIcon.image = UIImage(named: categoryImageArray[indexPath.row])
+      //  cell.imageViewMenuIcon.image = UIImage(named: categoryImageArray[indexPath.row])
         
         if indexPath.row == selectSectionIndex {
             let myCustomSelectionColorView = UIView()
             myCustomSelectionColorView.backgroundColor = UIColor.gray
-            cell.backgroundView = myCustomSelectionColorView
+          //  cell.backgroundView = myCustomSelectionColorView
         }else{
             let myCustomSelectionColorView = UIView()
             myCustomSelectionColorView.backgroundColor = UIColor.clear
-            cell.backgroundView = myCustomSelectionColorView
+           // cell.backgroundView = myCustomSelectionColorView
         }
         return cell
     }
@@ -225,20 +229,5 @@ class SideMenuView: UIView,UITableViewDelegate,UITableViewDataSource {
         isOpen = !isOpen
         tableViewMenu.reloadData()
     }
-    
-//    @objc func changeLanguage_LogoutClicked(_ sender: UIButton) {
-//        if (sender.tag == menuArray.count) {
-//
-//            delegate?.changeLanguageFromSlidePanelView()
-//        }else{
-//
-//            delegate?.logoutFromSlidePanelView()
-//        }
-//    }
-    
-//    @IBAction func buttonProfileAction(_ sender: UIButton) {
-//
-//        delegate?.goProfileFromSlidePanelView()
-//    }
     
 }

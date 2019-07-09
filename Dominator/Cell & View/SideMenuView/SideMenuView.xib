@@ -4,64 +4,69 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="MyriadPro-Regular.otf">
-            <string>MyriadPro-Regular</string>
-        </array>
-        <array key="MyriadPro-Semibold.otf">
-            <string>MyriadPro-Semibold</string>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SideMenuView" customModule="FashZipVendor" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SideMenuView" customModule="Dominator" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Otr-GZ-eur">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMn-Mc-vHz">
-                    <rect key="frame" x="0.0" y="20" width="270" height="100"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMn-Mc-vHz" customClass="UIControl">
+                    <rect key="frame" x="0.0" y="20" width="270" height="60"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="1sq-u0-gGd" customClass="profile">
-                            <rect key="frame" x="10" y="5" width="50" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="aKQ-gg-jm6"/>
-                                <constraint firstAttribute="height" constant="50" id="rZo-XY-PbA"/>
-                            </constraints>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header-bar" translatesAutoresizingMaskIntoConstraints="NO" id="vQs-Z1-Kf5">
+                            <rect key="frame" x="0.0" y="0.0" width="270" height="60"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm7-iK-sDZ">
-                            <rect key="frame" x="10" y="60" width="252" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="12"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm7-iK-sDZ">
+                            <rect key="frame" x="10" y="10" width="252" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="G85-ND-48S"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNe-iz-oqw">
-                            <rect key="frame" x="10" y="78" width="252" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="12"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lNe-iz-oqw">
+                            <rect key="frame" x="10" y="30" width="252" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="sWO-Mx-bhE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="1sq-u0-gGd" firstAttribute="top" secondItem="xMn-Mc-vHz" secondAttribute="top" constant="5" id="Zqb-om-KD0"/>
-                        <constraint firstItem="1sq-u0-gGd" firstAttribute="centerX" secondItem="xMn-Mc-vHz" secondAttribute="centerX" constant="-100" id="ggl-qu-JnE"/>
-                        <constraint firstAttribute="height" constant="100" id="v5b-8I-pgo"/>
+                        <constraint firstAttribute="trailing" secondItem="qm7-iK-sDZ" secondAttribute="trailing" constant="8" id="29x-nM-Lc4"/>
+                        <constraint firstItem="vQs-Z1-Kf5" firstAttribute="top" secondItem="xMn-Mc-vHz" secondAttribute="top" id="9r7-PE-y8V"/>
+                        <constraint firstItem="lNe-iz-oqw" firstAttribute="top" secondItem="qm7-iK-sDZ" secondAttribute="bottom" id="C6b-o1-SbH"/>
+                        <constraint firstAttribute="bottom" secondItem="vQs-Z1-Kf5" secondAttribute="bottom" id="IZf-db-COc"/>
+                        <constraint firstItem="vQs-Z1-Kf5" firstAttribute="leading" secondItem="xMn-Mc-vHz" secondAttribute="leading" id="NF9-9B-1Cm"/>
+                        <constraint firstItem="lNe-iz-oqw" firstAttribute="leading" secondItem="xMn-Mc-vHz" secondAttribute="leading" constant="10" id="RKU-M4-5MF"/>
+                        <constraint firstItem="qm7-iK-sDZ" firstAttribute="top" secondItem="xMn-Mc-vHz" secondAttribute="top" constant="10" id="UA7-XR-cA5"/>
+                        <constraint firstAttribute="trailing" secondItem="lNe-iz-oqw" secondAttribute="trailing" constant="8" id="WfN-qx-5Ga"/>
+                        <constraint firstAttribute="trailing" secondItem="vQs-Z1-Kf5" secondAttribute="trailing" id="gEb-Ok-xhU"/>
+                        <constraint firstItem="qm7-iK-sDZ" firstAttribute="leading" secondItem="xMn-Mc-vHz" secondAttribute="leading" constant="10" id="kYn-gN-hCr"/>
+                        <constraint firstAttribute="height" constant="60" id="v5b-8I-pgo"/>
                         <constraint firstAttribute="width" constant="270" id="vT1-aK-0Sj"/>
                     </constraints>
+                    <connections>
+                        <action selector="userProfileSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="YcL-I8-fwg"/>
+                    </connections>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ct7-zd-BKR">
-                    <rect key="frame" x="0.0" y="120" width="270" height="547"/>
+                    <rect key="frame" x="0.0" y="80" width="270" height="587"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="270" id="Ida-Ft-iuW"/>
@@ -82,7 +87,6 @@
             </constraints>
             <connections>
                 <outlet property="imageViewBack" destination="Otr-GZ-eur" id="ovm-z8-txP"/>
-                <outlet property="imgvUser" destination="1sq-u0-gGd" id="Cll-Nd-vks"/>
                 <outlet property="lblEmail" destination="lNe-iz-oqw" id="WWt-a0-JLa"/>
                 <outlet property="lblName" destination="qm7-iK-sDZ" id="u8o-CA-UdD"/>
                 <outlet property="tableViewMenu" destination="ct7-zd-BKR" id="d2s-dq-7Gu"/>
@@ -92,6 +96,6 @@
         </view>
     </objects>
     <resources>
-        <image name="profile" width="85" height="85"/>
+        <image name="header-bar" width="360" height="54"/>
     </resources>
 </document>

@@ -10,6 +10,8 @@ import UIKit
 
 class QuoteCell: UITableViewCell {
 
+    @IBOutlet weak var lblProductName: UILabel!
+    @IBOutlet weak var imgvProduct: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

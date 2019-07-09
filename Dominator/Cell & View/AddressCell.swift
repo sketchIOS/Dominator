@@ -10,6 +10,10 @@ import UIKit
 
 class AddressCell: UITableViewCell {
 
+    @IBOutlet weak var btnOptions: UIButton!
+    @IBOutlet weak var lblPhone: UILabel!
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

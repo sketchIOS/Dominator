@@ -10,6 +10,13 @@ import UIKit
 
 class CartProductCell: UITableViewCell {
 
+    @IBOutlet weak var btnDelete: UIButton!
+    @IBOutlet weak var btnPlus: UIButton!
+    @IBOutlet weak var btnMinus: UIButton!
+    @IBOutlet weak var lblQty: UILabel!
+    @IBOutlet weak var lblLockType: UILabel!
+    @IBOutlet weak var lblModel: UILabel!
+    @IBOutlet weak var lblSeriesName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

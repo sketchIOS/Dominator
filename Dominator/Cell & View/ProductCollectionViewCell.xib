@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="QDK-36-bmd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="QDK-36-bmd">
                                 <rect key="frame" x="5" y="5" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,6 +36,9 @@
                     </view>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="imgvProduct" destination="QDK-36-bmd" id="bq0-Tv-ZtM"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

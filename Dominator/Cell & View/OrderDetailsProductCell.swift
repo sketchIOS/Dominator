@@ -10,6 +10,11 @@ import UIKit
 
 class OrderDetailsProductCell: UITableViewCell {
 
+    @IBOutlet weak var lblLockType: UILabel!
+    @IBOutlet weak var lblAmaunt: UILabel!
+    @IBOutlet weak var lblQty: UILabel!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var imgvProduct: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

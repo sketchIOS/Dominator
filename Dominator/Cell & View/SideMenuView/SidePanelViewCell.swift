@@ -11,9 +11,9 @@ import UIKit
 class SidePanelViewCell: UITableViewCell {
 
     @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var imageViewMenuIcon: UIImageView!
+    //@IBOutlet weak var imageViewMenuIcon: UIImageView!
     @IBOutlet weak var lblLine: UILabel!
-    @IBOutlet weak var imageViewArrow: UIImageView!
+   // @IBOutlet weak var imageViewArrow: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
